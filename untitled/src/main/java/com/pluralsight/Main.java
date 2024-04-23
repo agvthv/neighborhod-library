@@ -74,12 +74,12 @@ public class Main {
         System.out.println("C - Check Out a Book");
         System.out.println("X - Go Back");
         System.out.print("Please enter here: ");
-        userInput.nextLine(); // Consume newline left-over
+        userInput.nextLine();
         String option = userInput.nextLine();
         if (option.equalsIgnoreCase("C")) {
             System.out.print("Enter the ID of the book to check out: ");
             int bookId = userInput.nextInt();
-            userInput.nextLine(); // Consume newline
+            userInput.nextLine();
             for (Books book : books) {
                 if (book.getId() == bookId && !book.isCheckedOut()) {
                     System.out.print("Please enter your name: ");
@@ -91,7 +91,7 @@ public class Main {
             }
             System.out.println("Invalid book ID or book already checked out.");
         } else if (option.equalsIgnoreCase("X")) {
-            // Just return to the main menu
+
         } else {
             System.out.println("Invalid option.");
         }
@@ -117,7 +117,7 @@ public class Main {
         if (choice.equalsIgnoreCase("C")) {
             System.out.print("Enter book ID to check in: ");
             int id = userInput.nextInt();
-            userInput.nextLine(); // Consume newline
+            userInput.nextLine();
             for (Books book : books) {
                 if (book.getId() == id && book.isCheckedOut()) {
                     book.checkIn();
@@ -127,7 +127,7 @@ public class Main {
             }
             System.out.println("Invalid book ID or book is not checked out.");
         } else if (choice.equalsIgnoreCase("X")) {
-            // Just return to the main menu
+
         } else {
             System.out.println("Invalid option.");
         }
@@ -136,7 +136,7 @@ public class Main {
     public static void checkIn(Books[] books) {
         System.out.print("Enter the ID of the book you want to check in: ");
         int bookId = userInput.nextInt();
-        userInput.nextLine(); // Consume newline
+        userInput.nextLine();
         for (Books book : books) {
             if (book.getId() == bookId && book.isCheckedOut()) {
                 book.checkIn();
