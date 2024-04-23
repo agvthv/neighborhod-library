@@ -43,7 +43,7 @@ public class Main {
                     checkIn(books);
                     break;
                 default:
-                    System.out.println("\nInvalid option. Please try again.\n");
+                    System.out.println("Invalid option. Please try again.\n");
                     break;
             }
         }
@@ -53,10 +53,10 @@ public class Main {
         System.out.println("Welcome to the Neighborhood Library");
         System.out.println("------------------------------------");
         System.out.println("Would you like to: ");
-        System.out.println("\n1 - View Available Books");
+        System.out.println("1 - View Available Books");
         System.out.println("2 - View Checked Out Books");
         System.out.println("3 - Check In a Book");
-        System.out.println("\nPlease enter here: ");
+        System.out.println("Please enter here: ");
         return userInput.nextInt();
     }
 
@@ -70,7 +70,7 @@ public class Main {
             }
         }
 
-        System.out.println("\nWould you like to: ");
+        System.out.println("Would you like to: ");
         System.out.println("C - Check Out a Book");
         System.out.println("X - Go Back");
         System.out.print("Please enter here: ");
